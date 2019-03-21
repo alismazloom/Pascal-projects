@@ -99,7 +99,7 @@
          Tour[i+1,k,1]:=s;
          Tour[s,k,2]:=0;
          Le[k]:=Le[k]+D[Tour[i,k,1],Tour[i+1,k,1]];
-         T1:=T[Tour[i,k,1],Tour[i+1,k,1]];  {Local updating occurs accordong to Q-Learning algorithm}
+         T1:=T[Tour[i,k,1],Tour[i+1,k,1]];  {Local updating occurs according to Q-Learning algorithm}
          T[Tour[i,k,1],Tour[i+1,k,1]]:=R*g*Q_Learning(s)+(1-R)*T1;
          T[Tour[i+1,k,1],Tour[i,k,1]]:=T[Tour[i,k,1],Tour[i+1,k,1]];
        End;  {End of i}
